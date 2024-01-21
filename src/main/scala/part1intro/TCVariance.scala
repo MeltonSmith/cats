@@ -61,7 +61,7 @@ object TCVariance {
 
   def main(args: Array[String]): Unit = {
     println(organizeShow[Cat]) //ok - the compiler will inject CatsShow as implicit
-    println(organizeShow[Animal])
+//    println(organizeShow[Animal])
   }
 
 
