@@ -85,7 +85,7 @@ object Writers {
     val sumFuture1= Future(naiveSumWithWriters(100))
     val sumFuture2= Future(naiveSumWithWriters(100))
     val logs1 = sumFuture1.map(_.written) //logs from thread 1
-    val logs2 = sumFuture2.map(_.written) //logs from thread 1
+    val logs2 = sumFuture2.map(_.written) //logs from thread 2
   }
 
 }
