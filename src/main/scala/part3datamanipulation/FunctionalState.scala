@@ -56,14 +56,14 @@ object FunctionalState {
   //returns a state data structure that, when run, returns Unit and sets the state to that value
   def set[A](value: A): State[A, Unit] = {
     State{
-      _ => (value, Unit)
+      _ => (value, ())
     }
   }
 
   //returns a State ds when run will return Unit the sets the state to f(state)
   def modify[A](f: A => A): State[A, Unit] = {
     State {
-      a => (f(a), Unit)
+      a => (f(a), ())
     }
   }
 
