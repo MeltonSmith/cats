@@ -30,7 +30,7 @@ object TCVariance {
   def makeSound[T](implicit soundMaker: SoundMaker[T]): Unit = println("wow")
   makeSound[Animal] //ok TC instance defined above
   makeSound[Cat] //ok - TC instance for Animal is also applicable to Cats
-  // rule 1: contrvariant TCs can use the superclass instances if nothing is available strictly for that type
+  // rule 1: contravariant TCs can use the superclass instances if nothing is available strictly for that type
 
   //has implications for subtypes
   implicit object OptionSoundMaker extends SoundMaker[Option[Int]]
